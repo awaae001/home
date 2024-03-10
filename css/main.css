@@ -1,0 +1,52 @@
+
+@media (max-width: 1200px) {
+    body {
+        background: url('https://baotangguo.cn:8081/') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter: blur(10%);
+    
+        color: white;
+    }
+}
+@media (min-width: 1201px) {
+    body {
+        background: url('https://baotangguo.cn:8081/') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter: blur(10%);
+    
+        color: white;
+        overflow-y: hidden;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.time {
+    font-size: 24px;
+}
+
+.hitokoto-a {
+    color: white;
+    backdrop-filter: blur(5px);
+    width: 30%;
+}
+
+.hitokoto-b {
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    /* 占据剩余空间，等同于flex-grow: 1; */
+}
