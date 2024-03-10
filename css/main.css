@@ -1,52 +1,89 @@
+ body {
+     background: url('https://baotangguo.cn:8081/') no-repeat center center fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     filter: blur(10%);
+     color: white;
+ }
 
-@media (max-width: 1200px) {
-    body {
-        background: url('https://baotangguo.cn:8081/') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        filter: blur(10%);
-    
-        color: white;
-    }
-}
-@media (min-width: 1201px) {
-    body {
-        background: url('https://baotangguo.cn:8081/') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        filter: blur(10%);
-    
-        color: white;
-        overflow-y: hidden;
-    }
-}
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
+ .main {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     margin: 0;
+     flex-direction: column;
+ }
 
-.time {
-    font-size: 24px;
-}
+ .time {
+     font-size: 52px;
+     margin-bottom: 5%;
+ }
 
-.hitokoto-a {
-    color: white;
-    backdrop-filter: blur(5px);
-    width: 30%;
-}
+ .text-yymx {
+     text-shadow: 0 0 4px #323232;
+     font-size: 26px;
+ }
 
-.hitokoto-b {
-    padding: 15px;
-    margin: 10px;
-    display: inline-block;
-    border-radius: 5px;
-    /* 占据剩余空间，等同于flex-grow: 1; */
-}
+ .hitokoto-a {
+     color: white;
+     backdrop-filter: blur(5px);
+     width: 80%;
+     text-align: center;
+ }
+
+ .hitokoto-b {
+     padding: 15px;
+     margin: 10px;
+     display: inline-block;
+     border-radius: 5px;
+     /* 占据剩余空间，等同于flex-grow: 1; */
+ }
+
+ #support-dialog {
+     display: none;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     transition: all .5s ease-out;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(24, 28, 39);
+     z-index: 1;
+     backdrop-filter: blur(5px);
+ }
+
+ #about-me {
+     display: none;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 4px 8px rgba(24, 28, 39);
+     z-index: 1;
+     backdrop-filter: blur(5px);
+ }
+
+
+ .button-space {
+     display: flex;
+     margin-top: 5px;
+     margin-bottom: 10px;
+ }
+
+ .button-space .site-button {
+     border-radius: 5px;
+     font-size: 16px;
+
+ }
+
+ .button-space .about-button {
+     border-radius: 5px;
+     font-size: 16px;
+ }
