@@ -12,7 +12,6 @@ function closeabotmeshow() {
 }
 
 
-
 function showTime() {
     var date = new Date();
     var hour = date.getHours();
