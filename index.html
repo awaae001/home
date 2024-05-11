@@ -15,9 +15,11 @@
 
 <body>
    <div class="main">
-      <div id="time" class="time">获取时间中…</div>
-      <span class="text-yymx">呓语梦轩</span>
-      <span class="text-about">于梦中呓语于此，吾见本心，吾观世界!</span>
+      <div class="about-div">
+         <img class="avatar" src="./image/ico.webp" alt="">
+         <span class="text-yymx"><a href="/page/about">呓语梦轩</a></span>
+         <span class="text-about">于梦中呓语于此，吾见本心，吾观世界!</span>
+      </div>
       <div class="hitokoto-a">
          <p id="hitokoto-b" class="hitokoto-b">:D 获取中...</p>
       </div>
@@ -77,49 +79,6 @@
 
             <button class="about-button" onclick="openabotmeshow()">关于我</button>
             <!-- 隐藏对话框，默认display为none -->
-            <div id="about-me" style="display: none;">
-               <div>
-                  <style>
-                     .about-me {
-                        display: flex;
-                        border: 1px solid #ccc;
-                        width: 500px;
-                        margin: 0 auto;
-                     }
-
-                     .avatar-about {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex: 1;
-                        padding: 10px;
-
-                        .info-about {
-                           flex: 2;
-                           padding: 10px;
-                        }
-
-                        img {
-                           max-width: 100px;
-                           max-height: 100px;
-                           border: 1px solid #ccc;
-                        }
-                     }
-                  </style>
-                  <div class="about-me">
-                     <div class="avatar-about">
-                        <img  src="https://blog.awaae001.top/ico.jpg" alt="头像">
-                     </div>
-                     <div class="info-about">
-                        <h2>以德服人【awaae001】</h2>
-                        <hr>
-                        <h3><em>一条没有理想的咸鱼</em></h3>
-                        <p>个人坐（作）家；学生</p>
-                     </div>
-                  </div>
-               </div>
-               <button class="close-button" onclick="closeabotmeshow()">关闭</button>
-            </div>
          </div>
       </div>
    </div>
