@@ -1,9 +1,0 @@
-body {
-    background: url('https://api.qjqq.cn/api/bingimg?day=7') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    filter: blur(10%);
-    color: white;
-}

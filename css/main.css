@@ -1,116 +1,76 @@
- body {
-     background: url('https://api.qjqq.cn/api/bingimg?day=7') no-repeat center center fixed;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     filter: blur(10%);
-     color: white;
- }
+body {
+    background: url('https://api.qjqq.cn/api/bingimg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: blur(10%);
+    color: white;
+    font-family: 'Source Han Serif CN Medium'
+}
 
- .main {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     min-height: 60vh;
-     margin: 0;
-     flex-direction: column;
- }
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 45vh;
+    margin: 0;
+    flex-direction: column;
+}
 
- .about-div {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
- }
+.about-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
- .avatar {
-     width: 124px;
-     border-radius: 50%;
- }
+.avatar {
+    width: 124px;
+    border-radius: 50%;
+}
 
- .time {
-     font-size: 52px;
-     margin-bottom: 5%;
- }
+.time {
+    font-size: 52px;
+    margin-bottom: 5%;
+}
 
- .text-yymx a {
-     text-shadow: 0 0 4px #323232;
-     font-size: 26px;
-     color: #fff;
- }
+.text-yymx a {
+    text-shadow: 0 0 4px #323232;
+    font-size: 26px;
+    color: #fff;
+}
 
- .text-about {
-     text-shadow: 0 0 4px #323232;
-     font-size: 16px;
-     margin-top: 10px;
- }
+.text-about {
+    text-shadow: 0 0 4px #323232;
+    font-size: 16px;
+    margin-top: 10px;
+}
 
- .hitokoto-a {
-     color: white;
-     width: 80%;
-     text-align: center;
-     border-radius: 10px;
- }
+.hitokoto-a {
+    color: white;
+    width: 80%;
+    text-align: center;
+    border-radius: 10px;
+}
 
- .hitokoto-b {
-     padding: 15px;
-     margin: 10px;
-     display: inline-block;
-     border-radius: 5px;
-     /* 占据剩余空间，等同于flex-grow: 1; */
- }
+.hitokoto-b {
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    /* 占据剩余空间，等同于flex-grow: 1; */
+}
 
- #support-dialog {
-     display: none;
-     position: fixed;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     transition: all .5s ease-out;
-     padding: 20px;
-     border-radius: 8px;
-     box-shadow: 0 4px 8px rgb(55, 55, 55);
-     z-index: 1;
-     background-color: #00000040;
-     backdrop-filter: blur(10px);
- }
+.website-list {
+    max-width: 900px;
+    min-height: 256px;
+    margin: auto;
+    border-radius: 5px;
+    backdrop-filter: blur(25px);
+}
 
- #about-me {
-     display: none;
-     position: fixed;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     padding: 20px;
-     border-radius: 8px;
-     box-shadow: 0 4px 8px rgb(55, 55, 55);
-     z-index: 1;
-
-     background-color: #00000040;
-     backdrop-filter: blur(10px);
-
- }
-
-
- .button-space {
-     display: flex;
-     margin-top: 5px;
-     margin-bottom: 10px;
- }
-
- .button-space .site-button {
-     border-radius: 5px;
-     font-size: 16px;
-     background-color: #00000040;
-     backdrop-filter: blur(10px);
-     color: white;
-     margin-right: 30px;
- }
-
- .button-space .about-button {
-     border-radius: 5px;
-     font-size: 16px;
-     background-color: #00000040;
-     backdrop-filter: blur(10px);
-     color: white;
- }
+.website-list p {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 16px;
+}

@@ -5,82 +5,32 @@
    <meta charset="UTF-8" />
    <title>呓语梦轩-Home</title>
    <link rel="icon" href="./image/ico.webp" sizes="16x16">
+   <!--woff2字体-->
+   <link rel='stylesheet'
+      href='https://ik.imagekit.io/awaae001/SourceHanSerifCN-Medium-6/result.css?updatedAt=1715492317835' />
    <!--CSS引入-->
-   <link rel="stylesheet" type="text/css" href="./css/main.css">
+   <link rel="stylesheet" type="text/css" href="/css/main.css">
+   <link rel="stylesheet" type="text/css" href="/css/card.css">
    <!--JS引入-->
-   <script src="./js/main.js" defer></script>
-   <script src="./js/jquery.min.js" defer></script>
-   <script src="https://cdn.bootcss.com/bluebird/3.5.1/bluebird.core.min.js"></script>
+   <script src="/js/main.js" defer></script>
+   <script src="/js/jquery.min.js"></script>
+   <script src="/js/bluebird.core.min.js"></script>
 </head>
 
 <body>
    <div class="main">
       <div class="about-div">
          <img class="avatar" src="./image/ico.webp" alt="">
-         <span class="text-yymx"><a href="/page/about">呓语梦轩</a></span>
+         <span class="text-yymx"><a href="/about">呓语梦轩</a></span>
          <span class="text-about">于梦中呓语于此，吾见本心，吾观世界!</span>
       </div>
       <div class="hitokoto-a">
          <p id="hitokoto-b" class="hitokoto-b">:D 获取中...</p>
       </div>
-
-      <div class="button-space">
-         <button class="site-button" onclick="opensiteshow()">网站集</button>
-         <!-- 隐藏对话框，默认display为none -->
-         <div id="support-dialog" style="display: none;">
-            <p style="text-align: center;">这里是呓语梦轩旗下的所有站点，欢迎访问！</p>
-            <div class="post-body">
-               <link rel="stylesheet" type="text/css" href="./css/card.css">
-               <div id="links">
-                  <div class="link-navigation">
-                     <div class="card">
-                        <img class="ava" src="./image/ico.webp" />
-                        <div class="card-header">
-                           <div>
-                              <a href="https://blog.awaae001.top/">博客</a>
-                           </div>
-                           <div class="info">呓语梦轩-个人博客</div>
-                        </div>
-                     </div>
-                     <div class="card">
-                        <img class="ava" src="https://image.m-c.top/statics/themes/nexmoe/IMG/OneIndexM.svg" />
-                        <div class="card-header">
-                           <div>
-                              <a href="https://image.m-c.top">图床</a>
-                           </div>
-                           <div class="info">oneIamge-图床</div>
-                        </div>
-                     </div>
-                     <div class="card">
-                        <img class="ava" src="./image/ico.jpg" />
-                        <div class="card-header">
-                           <div>
-                              <a href="https://cloud.awaae001.top">云盘</a>
-                           </div>
-                           <div class="info">基于Alist的网盘</div>
-                        </div>
-                     </div>
-                     <div class="card">
-                        <img class="ava"
-                           src="./image/e559b5d57c0c09b8403e0fe8c6c0fca13b16afeac31b7bda7ef4d429a8f1361a.png" />
-                        <div class="card-header">
-                           <div>
-                              <a href="https://memos.awaae001.top/">memos</a>
-                           </div>
-                           <div class="info">呓语梦轩的笔记本!</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <button class="close-button" onclick="closesiteshow()">关闭</button>
-            </div>
-         </div>
-         <div>
-
-            <button class="about-button" onclick="openabotmeshow()">关于我</button>
-            <!-- 隐藏对话框，默认display为none -->
-         </div>
-      </div>
+   </div>
+   <div class="website-list">
+      <p>呓语梦轩-网站集</p>
+      <div id="json-list"></div>
    </div>
 
 </body>
