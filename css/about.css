@@ -18,6 +18,7 @@ body {
 /*about关于我-CSS*/
 .about-me {
     backdrop-filter: blur(15px);
+    background-color: rgba(173, 173, 173, 0.2);
     border-radius: 5px;
     margin-top: 24px;
 }
@@ -96,11 +97,17 @@ body {
 /*结束*/
 
 .comeback{
-background-color: rgb(0,0,0,0);
 margin-top: 24px;
 padding: 16px 64px 16px 64px;
 backdrop-filter: blur(15px);
+background-color: rgba(173, 173, 173, 0.2);
 border-radius: 15px;
+border: none 
+}
+
+.comeback:hover{
+    cursor: pointer;
+    background-color: rgba(98, 98, 98, 0.5); 
 }
 
 .comeback span{
@@ -114,4 +121,5 @@ font-size: 24px;
     padding: 16px;
     border-radius: 16px;
     backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.2);
 }
