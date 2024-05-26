@@ -21,8 +21,20 @@
         {
             "name": "memos",
             "link": "https://memos.awaae001.top",
-            "avatar": "image/e559b5d57c0c09b8403e0fe8c6c0fca13b16afeac31b7bda7ef4d429a8f1361a.png",
+            "avatar": "/image/e559b5d57c0c09b8403e0fe8c6c0fca13b16afeac31b7bda7ef4d429a8f1361a.png",
             "info": "说说系统"
+        },
+        {
+            "name": "busuanzi",
+            "link": "https://pv.m-c.top",
+            "avatar": "image/favicon.svg",
+            "info": "自建不蒜子"
+        },
+        {
+            "name": "umami",
+            "link": "https://umami.awaae001.top",
+            "avatar": "image/favicon.ico",
+            "info": "umami统计"
         }
     ]
 }
