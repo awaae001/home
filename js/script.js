@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const runningTimeElement = document.getElementById('running-time');
     
     if (runningTimeElement) {
-        const startDate = new Date('2022-01-01');
+        const startDate = new Date('2023-05-25');
         setInterval(() => {
             const now = new Date();
             const diff = now - startDate;
