@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客时间线 - 呓语梦轩</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="/css/timeline.css">
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" class="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 p-2 rounded-full shadow-md" aria-label="切换主题">
+        <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+        <i class="fas fa-moon text-blue-300 hidden dark:block"></i>
+    </button>
+
+    <!-- 顶部区域 -->
+    <header class="relative py-20 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/random/1920x400/?mountains,nature');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4" data-aos="fade-up">博客时间线</h1>
+            <p class="text-xl text-white mb-8" data-aos="fade-up" data-aos-delay="100">记录博客更新历程</p>
+            <a href="/" class="inline-flex items-center text-white hover:text-green-200 transition">
+                <i class="fas fa-arrow-left mr-2"></i>
+                返回主页
+            </a>
+        </div>
+    </header>
+
+    <!-- 年份快速导航 -->
+    <div class="sticky top-0 bg-white dark:bg-gray-800 shadow-md z-20">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-center space-x-4 overflow-x-auto" id="year-navigation">
+                <!-- 年份导航将由JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 时间线主体区域 -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 flex justify-center">
+            <div class="relative w-full max-w-4xl">  <!-- 60%宽度 -->
+                <!-- 时间线内容 -->
+                <div id="timeline-container" class="relative">
+                    <!-- 时间线内容将由JavaScript动态生成 -->
+                    <div class="text-center py-8">
+                        <div class="inline-block p-3 rounded-full bg-gray-200">
+                            <i class="fas fa-spinner fa-spin text-green-600 text-2xl"></i>
+                        </div>
+                        <p class="mt-4 text-gray-600">正在加载时间线数据...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-serif font-bold">呓语梦轩</h3>
+                    <p class="mt-2 text-gray-400">于梦中呓语千里，吾见本心，看见世界！</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://blog.awaae001.top/" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-blog text-xl"></i>
+                    </a>
+                    <a href="mailto:admin@awaae001.top" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <div class="text-center text-sm text-gray-500">
+                © 2022-2025 awaae(player8635). All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300" aria-label="返回顶部">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 时间线条目模板 (用于JavaScript克隆) -->
+    <template id="year-template">
+        <div class="year-section mb-16">
+            <div class="year-header relative mb-8">
+                <h2 class="text-3xl font-serif font-bold text-center">
+                    <span class="year-value bg-white dark:bg-gray-800 px-6 relative z-10"></span>
+                </h2>
+                <div class="absolute top-1/2 left-0 right-0 h-1 bg-green-200 -z-10"></div>
+            </div>
+            <div class="month-container"></div>
+        </div>
+    </template>
+
+    <template id="month-template">
+        <div class="month-section mb-8">
+            <h3 class="text-xl font-serif font-bold text-gray-700 dark:text-gray-300 mb-4 month-value"></h3>
+            <div class="article-container"></div>
+        </div>
+    </template>
+
+    <template id="article-template">
+        <div class="article-item mb-8 md:mb-12" data-aos="fade-up">
+            <div class="article-date text-sm text-gray-500 mb-2"></div>
+            <h4 class="article-title text-lg font-medium hover:text-green-600 transition-colors duration-300">
+                <a href="#" target="_blank"></a>
+            </h4>
+        </div>
+    </template>
+
+    <!-- 脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="/js/timeline.js"></script>
+</body>
+</html>
